@@ -1,0 +1,67 @@
+@import '../../../../styles/mixins';
+
+.header-top {
+  display: flex;
+  padding: 35px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+  align-items: center;
+
+  @include md {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    border-bottom: none;
+  }
+
+  .info-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Bauhaus', sans-serif;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .link {
+      padding-left: 25px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
+    .phone {
+      background: url('../../../../../public/icons/header/phone.svg') no-repeat left center;
+    }
+
+    .email {
+      background: url('../../../../../public/icons/header/email.svg') no-repeat left center;
+    }
+
+    .instagram {
+      background: url('../../../../../public/icons/header/instagram.svg') no-repeat left center;
+    }
+
+    .gis2 {
+      background: url('../../../../../public/icons/header/2gis.svg') no-repeat left center;
+    }
+
+    .button {
+      background-color: inherit;
+      color: #fff;
+      border: 0.8px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
+      padding: 10px 55px 8px 55px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+  }
+}
