@@ -91,3 +91,15 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.content {
+  position: relative;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

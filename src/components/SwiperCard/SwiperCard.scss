@@ -1,0 +1,74 @@
+@import '../../styles/mixins';
+
+.swiper-card {
+  max-width: 1015px;
+  margin: 0 60px 70px 60px;
+
+  .subtitle {
+    font-family: 'Room', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include xl {
+      font-size: 20px;
+    }
+
+    @include lg {
+      font-size: 18px;
+    }
+
+    @include md {
+      font-size: 16px;
+    }
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+
+  .title {
+    font-weight: 900;
+    margin: 10px 0 30px;
+    font-size: 70px;
+    line-height: 106%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include xl {
+      font-size: 65px;
+    }
+
+    @include lg {
+      font-size: 50px;
+    }
+
+    @include md {
+      font-size: 40px;
+    }
+
+    @include sm {
+      font-size: 30px;
+    }
+
+    span {
+      color: #c19d6d;
+    }
+  }
+
+  .button {
+    background-color: inherit;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 10px 55px 8px 55px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}

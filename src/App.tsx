@@ -1,13 +1,19 @@
 import React from 'react';
-import './styles/App.scss';
 import Header from './UI/Header/Header';
+import Main from './features/Main/Main';
+import './styles/App.scss';
 
 const App = () => {
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <div className="content">
+        <header>
+          <Header />
+        </header>
+        <main className="main">
+          <Main />
+        </main>
+      </div>
     </>
   );
 };
