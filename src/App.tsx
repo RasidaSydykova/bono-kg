@@ -4,9 +4,10 @@ import Main from './features/Main/Main';
 import AboutUs from './features/AboutUs/AboutUs';
 import Menu from './features/Menu/Menu';
 import Gallery from './features/Gallery/Gallery';
-import './styles/App.scss';
 import Video from './features/Video/Video';
 import Contacts from './features/Contacts/Contacts';
+import Booking from './features/Booking/Booking';
+import './styles/App.scss';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Gallery />
           <Video />
           <Contacts />
+          <Booking />
         </section>
       </div>
     </>
