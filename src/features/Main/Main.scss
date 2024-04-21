@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 
 .main {
-  height: 100vh;
+  margin-bottom: 100px;
 
   .img-block {
     width: 100%;
@@ -47,7 +47,6 @@
       @include md {
         margin-top: -70px;
       }
-
     }
 
     .swiper-pagination-bullet {
@@ -63,17 +62,5 @@
     .swiper-pagination-bullet-active {
       background-color: #fff;
     }
-  }
-}
-
-:root {
-  --swiper-navigation-size: 40px;
-
-  @include lg {
-    --swiper-navigation-size: 30px;
-  }
-
-  @include md {
-    --swiper-navigation-size: 25px;
   }
 }

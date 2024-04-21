@@ -17,7 +17,7 @@
   .nav {
     display: block;
 
-    @include md {
+    @include sm {
       display: none;
     }
   }

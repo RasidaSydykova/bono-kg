@@ -8,6 +8,10 @@
     list-style: none;
     font-size: 18px;
 
+    @include md {
+      gap: 20px;
+    }
+
     .list,
     .link {
       transition: all 0.4s ease;
@@ -22,8 +26,12 @@
     }
 
     @include md {
+      font-size: 15px;
+    }
+
+    @include sm {
       flex-direction: column;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }

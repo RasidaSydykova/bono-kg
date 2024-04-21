@@ -1,3 +1,4 @@
+@import '../styles/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
@@ -92,14 +93,14 @@ body {
   margin: 0 auto;
 }
 
-.content {
-  position: relative;
-}
+:root {
+  --swiper-navigation-size: 40px;
 
-.main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  @include lg {
+    --swiper-navigation-size: 30px;
+  }
+
+  @include md {
+    --swiper-navigation-size: 25px;
+  }
 }

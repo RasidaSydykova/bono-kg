@@ -2,14 +2,14 @@
 
 .header {
   overflow: hidden;
-  position: relative;
+  position: fixed;
   z-index: 300;
-  height: 100vh;
+  width: 100%;
 
   .desktop {
-    @include md {
-      display: flex;
-      flex-direction: column-reverse;
+    padding-bottom: 20px;
+
+    .border {
       border-bottom: 1px solid rgba(255, 255, 255, 0.21);
     }
   }
@@ -17,7 +17,7 @@
   .mobile {
     display: none;
 
-    @include md {
+    @include sm {
       display: block;
     }
 
@@ -37,26 +37,26 @@
     }
 
     .menu {
-      display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: -50%;
-      height: 100vh;
+      right: -100%;
+      height: 100%;
       background-color: black;
       color: white;
-      width: 50%;
+      width: 100%;
       transition: all 1s ease;
       z-index: 100;
+      overflow: hidden;
 
-      @include md {
+      @include sm {
         display: flex;
         justify-content: center;
         align-items: center;
       }
-    }
 
-    .active {
-      right: 0;
+      &.active {
+        right: 0;
+      }
     }
   }
 }

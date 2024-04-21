@@ -29,7 +29,7 @@
 }
 
 @mixin xxl {
-  @media screen and (max-width: 1360px) {
+  @media screen and (max-width: 1240px) {
     @content;
   }
 }

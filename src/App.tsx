@@ -12,14 +12,12 @@ import './styles/App.scss';
 
 const App = () => {
   return (
-    <div className="content">
+    <>
       <header>
         <Header />
       </header>
-      <main className="main">
-        <Main />
-      </main>
       <section>
+        <Main />
         <AboutUs />
         <Menu />
         <Gallery />
@@ -30,7 +28,7 @@ const App = () => {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 
