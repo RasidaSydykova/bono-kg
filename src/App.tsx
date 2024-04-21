@@ -3,6 +3,7 @@ import Header from './UI/Header/Header';
 import Main from './features/Main/Main';
 import './styles/App.scss';
 import AboutUs from './features/AboutUs/AboutUs';
+import Menu from './features/Menu/Menu';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         </main>
         <section>
           <AboutUs />
+          <Menu />
         </section>
       </div>
     </>

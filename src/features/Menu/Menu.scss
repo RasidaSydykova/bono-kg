@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+
+.menu-block {
+  margin-top: 98px;
+
+  .title {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+
+    @include lg {
+      font-size: 46px;
+    }
+
+    @include lg {
+      font-size: 44px;
+    }
+
+    @include md {
+      font-size: 42px;
+    }
+
+    @include sm {
+      font-size: 40px;
+    }
+  }
+}
