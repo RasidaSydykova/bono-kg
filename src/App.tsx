@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './UI/Header/Header';
 import Main from './features/Main/Main';
 import './styles/App.scss';
+import AboutUs from './features/AboutUs/AboutUs';
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
         <main className="main">
           <Main />
         </main>
+        <section>
+          <AboutUs />
+        </section>
       </div>
     </>
   );

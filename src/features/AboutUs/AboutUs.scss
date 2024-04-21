@@ -1,0 +1,45 @@
+@import '../../styles/mixins';
+
+.about-us-block {
+  margin-top: 98px;
+
+  .top,
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include md {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .img {
+      max-width: 493px;
+      height: auto;
+      display: flex;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .cards {
+      margin-right: auto;
+
+      @include md {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .bottom {
+    flex-direction: row-reverse;
+    margin-top: 200px;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+}

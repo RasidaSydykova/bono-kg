@@ -1,0 +1,57 @@
+@import '../../styles/mixins';
+
+.cards {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .card {
+    width: 100%;
+    .title {
+      font-size: 32px;
+      font-family: 'Black Crow Extra Light', sans-serif;
+      font-weight: 200;
+      padding-left: 40px;
+
+      @include lg {
+        font-size: 26px;
+      }
+
+      @include md {
+        font-size: 26px;
+      }
+
+      @include sm {
+        font-size: 24px;
+      }
+    }
+
+    .text {
+      margin-top: 10px;
+      font-family: 'Black Crow Extra Light', sans-serif;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+
+      @include lg {
+        font-size: 16px;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+    }
+
+    .cuisine {
+      background: url('../../../public/icons/about-us/fork_and_knife.svg') left center no-repeat;
+    }
+
+    .building {
+      background: url('../../../public/icons/about-us/buildings.svg') left center no-repeat;
+    }
+
+    .booking {
+      background: url('../../../public/icons/about-us/booking.svg') left center no-repeat;
+    }
+  }
+}
