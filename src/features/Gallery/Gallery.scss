@@ -1,0 +1,28 @@
+.gallery-block {
+  margin-top: 98px;
+
+  .swiper {
+
+    .title {
+      text-align: center;
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .slider {
+      .img {
+        width: 400px;
+        height: 400px;
+
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+
+    }
+  }
+}
