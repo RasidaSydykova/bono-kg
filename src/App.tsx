@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from './UI/Header/Header';
 import Main from './features/Main/Main';
-import './styles/App.scss';
 import AboutUs from './features/AboutUs/AboutUs';
 import Menu from './features/Menu/Menu';
+import Gallery from './features/Gallery/Gallery';
+import './styles/App.scss';
+import Video from './features/Video/Video';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
         <section>
           <AboutUs />
           <Menu />
+          <Gallery />
+          <Video />
         </section>
       </div>
     </>

@@ -1,0 +1,138 @@
+@import '../../styles/mixins';
+
+.video-block {
+  margin-top: 98px;
+  height: 100vh;
+  width: 100vw;
+  background: url('../../../public/video/video-block-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1110px;
+    height: 500px;
+
+    @include xl {
+      width: 900px;
+      height: 450px;
+    }
+
+    @include lg {
+      width: 700px;
+      height: 400px;
+    }
+
+    @include md {
+      width: 500px;
+      height: 300px;
+    }
+
+    @include sm {
+      width: 400px;
+      height: 200px;
+    }
+  }
+
+  .img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .image {
+      width: 1110px;
+      height: 500px;
+
+      @include xl {
+        width: 900px;
+        height: 450px;
+      }
+
+      @include lg {
+        width: 700px;
+        height: 400px;
+      }
+
+      @include md {
+        width: 500px;
+        height: 300px;
+      }
+
+      @include sm {
+        width: 400px;
+        height: 200px;
+      }
+    }
+  }
+
+  .button {
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .info {
+    background: #282828;
+    padding: 18px 16px;
+    width: 267px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+    @include lg {
+      width: 250px;
+    }
+
+    @include md {
+      width: 200px;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    span {
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.05em;
+
+      @include lg {
+        font-size: 18px;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 20px;
+      letter-spacing: -0.05em;
+      color: rgba(255, 255, 255, 0.8);
+
+      @include lg {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+    }
+  }
+}
