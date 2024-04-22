@@ -5,6 +5,7 @@ const Booking = () => {
   return (
     <div className="booking-block">
       <div className="form-block container">
+        <h2 className="title">Бронирование столика</h2>
         <div className="inner">
           <form className="form">
             <div className="item">

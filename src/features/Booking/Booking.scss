@@ -9,15 +9,40 @@
   position: relative;
 
   .form-block {
+    display: flex;
+    justify-content: center;
+
+    .title {
+      text-align: center;
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 48px;
+      color: #fff;
+      margin-top: 50px;
+
+      @include xl {
+        font-size: 44px;
+      }
+
+      @include lg {
+        font-size: 40px;
+      }
+
+      @include md {
+        font-size: 36px;
+      }
+
+      @include sm {
+        font-size: 32px;
+      }
+    }
     .inner {
       position: absolute;
-      top: 50%;
+      top: 70%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -70%);
       padding: 50px;
       background-color: #111111;
       border-radius: 50px;
-
 
       .form {
         width: 328px;
@@ -28,6 +53,11 @@
         color: rgba(255, 255, 255, 0.8);
         font-size: 16px;
 
+        @include sm {
+          max-width: 200px;
+          font-size: 14px;
+        }
+
         .item {
           display: flex;
           flex-direction: column;
@@ -37,6 +67,10 @@
             font-weight: 500;
             color: #fff;
             opacity: 0.6;
+
+            @include sm {
+              font-size: 11px;
+            }
           }
 
           .input {
@@ -86,6 +120,10 @@
           background-color: #282828;
           transition: all 0.4s ease;
           cursor: pointer;
+
+          @include sm {
+            font-size: 16px;
+          }
 
           &:hover {
             scale: 1.05;
