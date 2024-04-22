@@ -4,12 +4,25 @@
   display: flex;
   justify-content: space-between;
 
+  @include md {
+    flex-direction: column;
+  }
+
   .logo {
     background: url('../../../../../public/icons/footer/up.svg') no-repeat left bottom 50px;
+
+    @include md {
+      padding-bottom: 70px;
+      background: url('../../../../../public/icons/footer/up.svg') no-repeat left bottom -10px;
+    }
   }
 
   .item {
     color: rgba(255, 255, 255, 0.8);
+
+    @include md {
+      margin-top: 20px;
+    }
 
     .title {
       font-size: 18px;
@@ -31,7 +44,7 @@
 
 
         &:hover {
-          scale: 1.05;
+          scale: 1.01;
         }
       }
     }

@@ -4,7 +4,7 @@ import './FooterBottom.scss';
 const FooterBottom = () => {
   return (
     <div className="footer-bottom container">
-      <p>© 2024 год, Bono bar . Все права защищены.</p>
+      <p className="rights">© 2024 год, Bono bar . Все права защищены.</p>
       <div className="social-links">
         <a className="link" href="/" target="_blank" rel="noreferrer">
           <img src="/icons/footer/instagram.svg" alt="Instagram" />
