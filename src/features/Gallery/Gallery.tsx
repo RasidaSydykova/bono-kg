@@ -14,7 +14,7 @@ const Gallery = () => {
         <Swiper
           slidesPerView={4}
           centeredSlides={true}
-          spaceBetween={50}
+          spaceBetween={20}
           pagination={{
             type: 'fraction',
           }}
@@ -24,22 +24,22 @@ const Gallery = () => {
         >
           <SwiperSlide className="slider">
             <div className="img">
-              <img src="/gallery/gallery-img4.jpg" alt="Gallery" />
+              <img style={{ width: '400px' }} src="/gallery/gallery-img4.jpg" alt="Gallery" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="slider">
             <div className="img">
-              <img src="/gallery/gallery-img1.jpg" alt="Gallery" />
+              <img style={{ width: '400px' }} src="/gallery/gallery-img1.jpg" alt="Gallery" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="slider">
             <div className="img">
-              <img src="/gallery/gallery-img2.jpg" alt="Gallery" />
+              <img style={{ width: '400px' }} src="/gallery/gallery-img2.jpg" alt="Gallery" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="slider">
             <div className="img">
-              <img src="/gallery/gallery-img3.jpg" alt="Gallery" />
+              <img style={{ width: '400px' }} src="/gallery/gallery-img3.jpg" alt="Gallery" />
             </div>
           </SwiperSlide>
         </Swiper>

@@ -1,8 +1,9 @@
+@import '../../styles/mixins';
+
 .gallery-block {
   margin-top: 100px;
 
   .swiper {
-
     .title {
       text-align: center;
       font-family: 'Comfortaa', sans-serif;
@@ -10,19 +11,59 @@
       font-size: 48px;
       color: #fff;
       margin-bottom: 30px;
+
+      @include lg {
+        font-size: 46px;
+      }
+
+      @include lg {
+        font-size: 44px;
+      }
+
+      @include md {
+        font-size: 38px;
+      }
+
+      @include sm {
+        font-size: 36px;
+      }
     }
 
     .slider {
       .img {
-        width: 400px;
+       max-width: 400px;
         height: 400px;
 
+        @include xl {
+          max-width: 350px;
+          height: 350px;
+        }
+
+        @include lg {
+          max-width: 300px;
+          height: 300px;
+        }
+
+        @include md {
+          max-width: 250px;
+          height: 250px;
+        }
+
+        @include sm {
+          max-width: 150px;
+          height: 150px;
+        }
+
         img {
-          width: 400px;
-          height: 400px;
+          max-width: 100%;
+          height: 100%;
         }
       }
+    }
 
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #ffffff;
     }
   }
 }
