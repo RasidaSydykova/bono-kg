@@ -1,13 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { IBooking } from '../../types';
+import { toast } from 'react-toastify';
 import './Booking.scss';
 
 const Booking = () => {
+  const [state, setState] = useState<IBooking>({
+    name: '',
+    phone: '',
+    hours: '',
+    time: '',
+    amount: '',
+    comment: '',
+  });
+
+  const inputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    console.log(value);
+
+    setState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+
+    setState((prevState) => ({
+      ...prevState,
+      hours: value,
+    }));
+  };
+
+  const onFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!state.name || !state.phone || !state.hours || !state.time || !state.amount) {
+      toast.error('Пожалуйста, заполните все поля!');
+      return;
+    }
+
+    setState(state);
+    toast.success('Спасибо! В ближайшее время с вами свяжутся для подтверждения бронирования');
+  };
+
   return (
     <div className="booking-block">
       <div className="form-block container">
         <h2 className="title">Бронирование столика</h2>
         <div className="inner">
-          <form className="form">
+          <form className="form" onSubmit={onFormSubmit}>
             <div className="item">
               <label className="label" htmlFor="name">
                 ФИО клиента
@@ -18,9 +60,8 @@ const Booking = () => {
                 name="name"
                 id="name"
                 placeholder="ФИО клиента"
-                // value={}
-                // onChange={}
-                required
+                value={state.name}
+                onChange={inputChange}
               />
             </div>
             <div className="item">
@@ -30,22 +71,25 @@ const Booking = () => {
               <input
                 className="input"
                 type="tel"
-                name="pnone"
+                name="phone"
                 id="phone"
                 placeholder="+996 XX-XX-XX"
-                // value={}
-                // onChange={}
-                required
+                value={state.phone}
+                onChange={inputChange}
               />
             </div>
             <div className="item">
               <label className="label" htmlFor="hours">
                 Время нахождения
               </label>
-              <select className="select" id="hours" name="hours" required>
-                <option selected disabled>
-                  Время нахождения
-                </option>
+              <select
+                className="select"
+                id="hours"
+                name="hours"
+                value={state.hours}
+                onChange={selectChange}
+              >
+                <option value="">Время нахождения</option>
                 <option value="one-hour">1 час</option>
                 <option value="two-hours">2 часа</option>
                 <option value="three-hours">3 часа</option>
@@ -64,9 +108,8 @@ const Booking = () => {
                 id="time"
                 name="time"
                 placeholder="Время брони"
-                // value={}
-                // onChange={}
-                required
+                value={state.time}
+                onChange={inputChange}
               />
             </div>
             <div className="item">
@@ -79,9 +122,8 @@ const Booking = () => {
                 id="amount"
                 name="amount"
                 placeholder="Количество гостей"
-                // value={}
-                // onChange={}
-                required
+                value={state.amount}
+                onChange={inputChange}
               />
             </div>
             <div className="item">
@@ -93,8 +135,8 @@ const Booking = () => {
                 id="comment"
                 name="comment"
                 placeholder="Кoмментарий"
-                // value={}
-                // onChange={}
+                value={state.comment}
+                onChange={inputChange}
               />
             </div>
             <button className="button" type="submit">
